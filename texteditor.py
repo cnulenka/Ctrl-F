@@ -3,7 +3,7 @@ import tkinter.filedialog as tk
 import tkinter.messagebox as tk2
 import tkinter.simpledialog as tk3
 from algo import *
-def operate(res,text):
+def operate(res,text): #to convert index to tkinterindex
         res2=[]
         res3=[]
         for i in range(0,len(text)):
@@ -45,8 +45,8 @@ class Application(Frame):
         editmenu.add_command(label = 'Copy', command = self.copy)
         editmenu.add_command(label = 'Paste', command = self.paste)
         editmenu.add_command(label = 'Clear', command = self.clear)
-        toolsmenu.add_command(label = 'Search', command = self.searchText)
-        toolsmenu.add_command(label = 'Search and Replace', command = self.searchRep)
+        toolsmenu.add_command(label = 'Find', command = self.searchText)
+        toolsmenu.add_command(label = 'Find and Replace', command = self.searchRep)
         toolsmenu.add_command(label = 'Word Count', command = self.wordCount)
         menubar.add_cascade(label = 'File', menu = filemenu)
         menubar.add_cascade(label = 'Edit', menu = editmenu)
